@@ -1,0 +1,17 @@
+import numpy as np
+import cv2
+
+image = cv2.imread('tshirt1.png',cv2.IMREAD_UNCHANGED)
+print(image.shape)
+position = (150,180)
+cv2.putText(
+     image, #numpy array on which text is written
+     "isana", #text
+     position, #position at which writing has to start
+     cv2.FONT_HERSHEY_SIMPLEX, #font family
+     1, #font size
+     (209, 80, 0, 255), #font color
+     3) #font stroke
+cv2.imshow('output.png', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

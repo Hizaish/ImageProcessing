@@ -1,0 +1,36 @@
+#using the  emboss imagefiltering 
+from PIL import Image, ImageFilter
+image = Image.open(r'pinkrose.png')
+embossimage = image.filter(ImageFilter.EMBOSS)
+embossimage.show()
+
+
+#using the imagefiltering find_edges
+from PIL import Image, ImageFilter
+image = Image.open('rose.png')
+edges_image = image.filter(ImageFilter.FIND_EDGES)
+edges_image.show()
+
+# Importing Image and ImageFilter module from PIL package
+from PIL import Image, ImageFilter
+ # creating a image object
+im1 = Image.open(r"1-500x250-3.jpg")
+ # applying the EDGE_ENHANCE filter
+im2 = im1.filter(ImageFilter.EDGE_ENHANCE)
+im2.show()
+
+# Importing Image and ImageFilter module from PIL package
+from PIL import Image, ImageFilter
+ # creating a image object
+im1 = Image.open(r"rose.png")
+ # applying the contour filter
+im2 = im1.filter(ImageFilter.CONTOUR)
+im2.show()
+
+# Importing Image and ImageFilter module from PIL package
+from PIL import Image, ImageFilter
+ # creating a image object
+im1 = Image.open(r"rose.png")
+ # applying the SHARPEN filter
+im2 = im1.filter(ImageFilter.SHARPEN)
+im2.show()

@@ -1,0 +1,19 @@
+import cv2
+import numpy as np
+image = cv2.imread('2-500x250-2.jpg')
+
+#apply different Blurring Techniques
+
+Gaussian = cv2.GaussianBlur(image, (7, 7), 0)  # Gaussian Blur
+median = cv2.medianBlur(image, 5)  # Median Blur
+Blur = cv2.blur(image, (5, 5) )   # Blur
+bilateral = cv2.bilateralFilter(image, 9, 75, 75)   #Bilateral Blur
+
+#Display the Original & Blurred Image
+cv2.imshow('Original Image', image)
+cv2.imshow('Gaussian Blurring', Gaussian)
+cv2.imshow('Median Blurring', median)
+cv2.imshow('Normalized Blur', Blur)
+cv2.imshow('Bilateral Blurring', bilateral)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
